@@ -42,7 +42,6 @@ export async function searchVacation(location: string) {
 
     const vacationPlan = await response.json();
 
-    console.log("vacationPlan= " + vacationPlan);
     const json = JSON.parse(vacationPlan ?? '');
 
     return json;

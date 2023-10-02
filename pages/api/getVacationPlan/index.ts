@@ -64,7 +64,6 @@ export default async function handler(req: any, res: any) {
         });
 
         const vacationPlan = chatCompletion.choices[0]?.message.function_call?.arguments;
-        console.log("vacationPlan = " + vacationPlan);
 
         await res.status(200).json(vacationPlan);
         return;
